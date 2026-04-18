@@ -45,7 +45,7 @@ export default function Home() {
                 <div className="flex gap-4 mb-2">
                   {[
                     { icon: <GithubIcon />, href: "https://github.com/ahmedseyam01", label: "Github" },
-                    { icon: <LinkedinIcon />, href: "#", label: "LinkedIn" },
+                    { icon: <LinkedinIcon />, href: "https://www.linkedin.com/in/ahmed-seyam-773225310", label: "LinkedIn" },
                   ].map((s) => (
                     <a 
                       key={s.label} 

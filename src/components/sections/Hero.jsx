@@ -162,7 +162,7 @@ export default function Hero() {
                 <div className="flex gap-3">
                    {[
                     { icon: <GithubIcon />, href: "https://github.com/ahmedseyam01" },
-                    { icon: <LinkedinIcon />, href: "#" },
+                    { icon: <LinkedinIcon />, href: "https://www.linkedin.com/in/ahmed-seyam-773225310" },
                   ].map((s, i) => (
                     <motion.a 
                       key={i} 
