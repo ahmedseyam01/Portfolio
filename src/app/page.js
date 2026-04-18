@@ -50,6 +50,8 @@ export default function Home() {
                     <a 
                       key={s.label} 
                       href={s.href} 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={s.label}
                       className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#9ca3af] hover:text-[#C800DF] hover:border-[#C800DF]/30 hover:bg-[#C800DF]/5 transition-all duration-300"
                     >

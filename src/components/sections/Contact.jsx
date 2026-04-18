@@ -107,6 +107,8 @@ export default function Contact() {
                       <a 
                         key={s.label} 
                         href={s.href} 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#9ca3af] hover:text-white hover:bg-white/10 hover:border-[#C800DF]/30 transition-all duration-300"
                       >
                         {s.icon}

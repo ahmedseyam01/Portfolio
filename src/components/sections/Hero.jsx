@@ -167,6 +167,8 @@ export default function Hero() {
                     <motion.a 
                       key={i} 
                       href={s.href} 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ y: -5, color: "#fff", backgroundColor: "rgba(200, 0, 223, 0.1)", borderColor: "rgba(200, 0, 223, 0.4)" }} 
                       className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white/[0.03] border border-white/10 text-[#9ca3af] backdrop-blur-md transition-all duration-300"
                     >
