@@ -21,7 +21,7 @@ function AnimatedText({ text, className }) {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.04, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.03, delayChildren: 0.03 * i },
     }),
   };
 
@@ -38,7 +38,7 @@ function AnimatedText({ text, className }) {
     },
     hidden: {
       opacity: 0,
-      y: 20,
+      y: 12,
       rotateX: 90,
       transition: {
         type: "spring",
@@ -109,7 +109,7 @@ export default function Hero() {
             onMouseLeave={handleMouseLeave}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="relative lg:col-span-7 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-2xl p-8 md:p-12 flex flex-col justify-center min-h-[480px] overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.2)]"
           >
             {/* Interactive Glow */}
@@ -122,7 +122,7 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.1 }}
                 className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/[0.03] border border-white/10 text-white/80 text-[10px] font-bold uppercase tracking-[0.2em] mb-10 backdrop-blur-md"
               >
                 <span className="w-2 h-2 rounded-full bg-[#C800DF] shadow-[0_0_10px_#C800DF] animate-pulse" />
@@ -143,7 +143,7 @@ export default function Hero() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 }}
+                transition={{ delay: 0.4 }}
                 className="text-lg md:text-xl text-[#9ca3af] max-w-lg leading-relaxed mb-12"
               >
                 <span className="text-white font-bold">Front-End Developer</span> graduate. <br className="hidden md:block"/> Transforming creative ideas into <span className="text-[#C800DF] italic">high-performance</span> digital reality.
@@ -152,7 +152,7 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 }}
+                transition={{ delay: 0.5 }}
                 className="flex flex-wrap gap-5"
               >
                 <a href="#projects" className="btn-primary px-8 py-4 flex items-center gap-3 group/btn text-sm font-bold uppercase tracking-widest bg-gradient-to-r from-[#C800DF] to-[#E60076] hover:scale-105 transition-all">
@@ -183,7 +183,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.9 }}
             className="relative lg:col-span-5 rounded-3xl overflow-hidden min-h-[480px] group border border-white/10 shadow-[20px_0_50px_rgba(200,0,223,0.1)]"
           >
             <Image
@@ -199,7 +199,7 @@ export default function Hero() {
                <motion.div 
                  initial={{ opacity: 0, y: 20 }}
                  whileInView={{ opacity: 1, y: 0 }}
-                 transition={{ delay: 0.5 }}
+                 transition={{ delay: 0.3 }}
                  className="p-6 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 text-center"
                >
                  <p className="text-[10px] font-mono text-[#C800DF] uppercase tracking-[0.3em] mb-2 font-bold">Featured Role</p>

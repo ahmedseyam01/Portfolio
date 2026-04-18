@@ -51,7 +51,7 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 1 }}
+      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "py-4 bg-[#0a0a0a]/80 backdrop-blur-2xl border-b border-white/5"
@@ -88,7 +88,7 @@ export default function Navbar() {
                 <motion.span
                   layoutId="nav-pill"
                   className="absolute inset-0 bg-white/10 rounded-full -z-10"
-                  transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+                  transition={{ type: "spring", bounce: 0.25, duration: 0.25 }}
                 />
               )}
             </a>

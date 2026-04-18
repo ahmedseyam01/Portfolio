@@ -44,7 +44,7 @@ export default function CustomCursor() {
           y: pos.y - 7,
           scale: hovering ? 0 : 1,
         }}
-        transition={{ type: "tween", ease: "backOut", duration: 0.08 }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.04 }}
       />
       {/* Ring */}
       <motion.div
@@ -55,7 +55,7 @@ export default function CustomCursor() {
           scale: hovering ? 1.6 : 1,
           backgroundColor: hovering ? "rgba(200,0,223,0.08)" : "rgba(0,0,0,0)",
         }}
-        transition={{ type: "tween", ease: "backOut", duration: 0.18 }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.08 }}
       />
     </>
   );

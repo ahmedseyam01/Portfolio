@@ -81,17 +81,17 @@ function ProjectCard({ project, index }) {
   return (
     <motion.article
       ref={cardRef}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.1 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.55, delay: index * 0.1 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="group relative flex flex-col h-full p-8 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+      className="group relative flex flex-col h-full p-8 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden transition-all duration-300 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
     >
       {/* Dynamic Hover Glow */}
       <motion.div 
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" 
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" 
         style={{ background }} 
       />
       
@@ -101,7 +101,7 @@ function ProjectCard({ project, index }) {
       <div className="relative z-10 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-8">
           <div className="flex flex-col">
-            <span className="text-4xl font-black opacity-10 group-hover:opacity-40 transition-all duration-500 transform group-hover:-translate-y-1" style={{ color: project.accent }}>
+            <span className="text-4xl font-black opacity-10 group-hover:opacity-40 transition-all duration-300 transform group-hover:-translate-y-1" style={{ color: project.accent }}>
               {project.title.charAt(0)}
             </span>
             <div className="w-6 h-[2px] mt-2 rounded-full" style={{ backgroundColor: project.accent }} />

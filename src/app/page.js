@@ -4,7 +4,6 @@ import { useState } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 import LoadingScreen from "@/components/LoadingScreen";
-import CustomCursor from "@/components/CustomCursor";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
@@ -29,7 +28,6 @@ export default function Home() {
 
       {loadingComplete && (
         <>
-          <CustomCursor />
           <AnimatedBackground />
           <Navbar />
 

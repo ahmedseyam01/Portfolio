@@ -9,8 +9,8 @@ export default function LoadingScreen({ onComplete }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(() => onComplete?.(), 600);
-    }, 2000);
+      setTimeout(() => onComplete?.(), 300);
+    }, 1200);
     return () => clearTimeout(timer);
   }, [onComplete]);
 
@@ -21,7 +21,7 @@ export default function LoadingScreen({ onComplete }) {
           key="loading"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
           className="fixed inset-0 z-[200] flex items-center justify-center bg-[#0a0a0a]"
           aria-label="Loading portfolio"
           role="status"
@@ -63,7 +63,7 @@ export default function LoadingScreen({ onComplete }) {
               <motion.div
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 1.8, ease: "easeInOut" }}
+                transition={{ duration: 1.0, ease: "easeInOut" }}
                 className="h-full bg-gradient-to-r from-[#C800DF] to-[#E60076]"
               />
             </div>
