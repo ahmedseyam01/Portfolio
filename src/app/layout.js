@@ -19,12 +19,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
+  return <>
     <html lang="en" className={`${jost.variable} ${overpassMono.variable} dark antialiased h-full`} style={{ colorScheme: 'dark' }}>
       <body className="min-h-full flex flex-col bg-[#0a0a0a] text-[#f3f4f6] selection:bg-[#C800DF]/30">
         {children}
       </body>
     </html>
-  );
+  </>;
 }
 

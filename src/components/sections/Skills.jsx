@@ -33,10 +33,11 @@ export default function Skills() {
   const mouseY = useMotionValue(0);
 
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
-    const { left, top } = cardRef.current.getBoundingClientRect();
-    mouseX.set(e.clientX - left);
-    mouseY.set(e.clientY - top);
+    if (cardRef.current) {
+      const { left, top } = cardRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - left);
+      mouseY.set(e.clientY - top);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -46,7 +47,7 @@ export default function Skills() {
 
   const backgroundGlow = useMotionTemplate`radial-gradient(600px circle at ${mouseX}px ${mouseY}px, rgba(200, 0, 223, 0.07), transparent 80%)`;
 
-  return (
+  return <>
     <section id="skills" className="py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <motion.div
@@ -124,5 +125,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  );
+  </>;
 }

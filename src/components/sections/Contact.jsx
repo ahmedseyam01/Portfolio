@@ -18,10 +18,11 @@ function ContactCard({ children, className = "" }) {
   const mouseY = useMotionValue(0);
 
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
-    const { left, top } = cardRef.current.getBoundingClientRect();
-    mouseX.set(e.clientX - left);
-    mouseY.set(e.clientY - top);
+    if (cardRef.current) {
+      const { left, top } = cardRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - left);
+      mouseY.set(e.clientY - top);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -31,7 +32,7 @@ function ContactCard({ children, className = "" }) {
 
   const background = useMotionTemplate`radial-gradient(500px circle at ${mouseX}px ${mouseY}px, rgba(200, 0, 223, 0.05), transparent 80%)`;
 
-  return (
+  return <>
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
@@ -44,11 +45,11 @@ function ContactCard({ children, className = "" }) {
       />
       {children}
     </div>
-  );
+  </>;
 }
 
 export default function Contact() {
-  return (
+  return <>
     <section id="contact" className="py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <motion.div
@@ -173,5 +174,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  );
+  </>;
 }

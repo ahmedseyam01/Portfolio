@@ -31,10 +31,9 @@ export default function CustomCursor() {
     };
   }, []);
 
-  if (!mounted) return null;
-
-  return (
-    <>
+  return <>
+    {mounted ? (
+      <>
       {/* Dot */}
       <motion.div
         className="fixed top-0 left-0 w-3.5 h-3.5 rounded-full pointer-events-none z-[100] mix-blend-screen"
@@ -57,6 +56,7 @@ export default function CustomCursor() {
         }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.08 }}
       />
-    </>
-  );
+      </>
+    ) : null}
+  </>;
 }

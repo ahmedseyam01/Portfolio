@@ -65,10 +65,11 @@ function ProjectCard({ project, index }) {
   const mouseY = useMotionValue(0);
 
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
-    const { left, top } = cardRef.current.getBoundingClientRect();
-    mouseX.set(e.clientX - left);
-    mouseY.set(e.clientY - top);
+    if (cardRef.current) {
+      const { left, top } = cardRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - left);
+      mouseY.set(e.clientY - top);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -78,7 +79,7 @@ function ProjectCard({ project, index }) {
 
   const background = useMotionTemplate`radial-gradient(450px circle at ${mouseX}px ${mouseY}px, ${project.accent}10, transparent 80%)`;
 
-  return (
+  return <>
     <motion.article
       ref={cardRef}
       initial={{ opacity: 0, y: 15 }}
@@ -144,11 +145,11 @@ function ProjectCard({ project, index }) {
         </div>
       </div>
     </motion.article>
-  );
+  </>;
 }
 
 export default function Projects() {
-  return (
+  return <>
     <section id="projects" className="py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <motion.div
@@ -171,5 +172,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  );
+  </>;
 }

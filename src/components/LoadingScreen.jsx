@@ -14,7 +14,7 @@ export default function LoadingScreen({ onComplete }) {
     return () => clearTimeout(timer);
   }, [onComplete]);
 
-  return (
+  return <>
     <AnimatePresence>
       {isVisible && (
         <motion.div
@@ -71,5 +71,5 @@ export default function LoadingScreen({ onComplete }) {
         </motion.div>
       )}
     </AnimatePresence>
-  );
+  </>;
 }

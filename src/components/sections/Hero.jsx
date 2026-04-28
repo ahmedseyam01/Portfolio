@@ -48,7 +48,7 @@ function AnimatedText({ text, className }) {
     },
   };
 
-  return (
+  return <>
     <motion.div
       style={{ overflow: "hidden", display: "flex", flexWrap: "wrap", perspective: "1000px" }}
       variants={container}
@@ -66,7 +66,7 @@ function AnimatedText({ text, className }) {
         </motion.span>
       ))}
     </motion.div>
-  );
+  </>;
 }
 
 export default function Hero() {
@@ -81,10 +81,11 @@ export default function Hero() {
   const mouseY = useMotionValue(0);
 
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
-    const { left, top } = cardRef.current.getBoundingClientRect();
-    mouseX.set(e.clientX - left);
-    mouseY.set(e.clientY - top);
+    if (cardRef.current) {
+      const { left, top } = cardRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - left);
+      mouseY.set(e.clientY - top);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -94,7 +95,7 @@ export default function Hero() {
 
   const backgroundGlow = useMotionTemplate`radial-gradient(600px circle at ${mouseX}px ${mouseY}px, rgba(200, 0, 223, 0.07), transparent 80%)`;
 
-  return (
+  return <>
     <section id="hero" ref={ref} className="min-h-screen relative flex items-center pt-24 pb-12 overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto px-6 md:px-10 w-full relative z-10"
@@ -220,5 +221,5 @@ export default function Hero() {
         <div className="w-[1px] h-16 bg-gradient-to-b from-[#C800DF] via-[#C800DF]/50 to-transparent shadow-[0_0_10px_#C800DF]" />
       </motion.div>
     </section>
-  );
+  </>;
 }

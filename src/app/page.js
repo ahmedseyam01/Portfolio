@@ -22,7 +22,7 @@ const LinkedinIcon = () => (
 export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
-  return (
+  return <>
     <>
       <LoadingScreen onComplete={() => setLoadingComplete(true)} />
 
@@ -70,5 +70,5 @@ export default function Home() {
         </>
       )}
     </>
-  );
+  </>;
 }

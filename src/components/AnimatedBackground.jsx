@@ -18,7 +18,7 @@ const particles = Array.from({ length: 20 }, (_, i) => ({
 }));
 
 export default function AnimatedBackground() {
-  return (
+  return <>
     <div
       aria-hidden="true"
       className="fixed inset-0 z-[-1] pointer-events-none bg-[#0a0a0a] overflow-hidden"
@@ -86,5 +86,5 @@ export default function AnimatedBackground() {
         />
       ))}
     </div>
-  );
+  </>
 }

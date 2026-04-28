@@ -9,10 +9,11 @@ function AboutCard({ children, className = "", delay = 0 }) {
   const mouseY = useMotionValue(0);
 
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
-    const { left, top } = cardRef.current.getBoundingClientRect();
-    mouseX.set(e.clientX - left);
-    mouseY.set(e.clientY - top);
+    if (cardRef.current) {
+      const { left, top } = cardRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - left);
+      mouseY.set(e.clientY - top);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -24,18 +25,16 @@ function AboutCard({ children, className = "", delay = 0 }) {
 
   return (
     <motion.div
-      ref={cardRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      ref={cardRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 0.55, delay }}
       className={`relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden group transition-all duration-300 hover:border-white/20 ${className}`}
     >
-      <motion.div 
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" 
-        style={{ background }} 
+      <motion.div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+        style={{ background }}
       />
       {children}
     </motion.div>
@@ -66,7 +65,7 @@ export default function About() {
     },
   ];
 
-  return (
+  return <>
     <section id="about" className="py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <motion.div
@@ -87,14 +86,14 @@ export default function About() {
           <AboutCard className="lg:col-span-5 p-8 md:p-10 flex flex-col justify-center">
             <div className="relative z-10">
               <p className="text-[#d1d5db] text-xl leading-relaxed mb-8">
-                I'm a passionate Front-End Developer who thrives at the intersection of <span className="text-white font-bold border-b-2 border-[#C800DF]/30">clean code</span> and <span className="text-white font-bold border-b-2 border-[#C800DF]/30">beautiful design</span>.
+                I’m a Front-End Developer who enjoys building <span className="text-white font-bold border-b-2 border-[#C800DF]/30">clean code</span> and creating <span className="text-white font-bold border-b-2 border-[#C800DF]/30">simple, good-looking interfaces</span>.
               </p>
               <div className="space-y-6 text-[#9ca3af] leading-relaxed text-base">
                 <p>
-                  As a CS & AI student, I bring analytical thinking to every UI challenge. My focus on React, Next.js, and modern CSS tooling helps me build fast, accessible, and visually rich web experiences.
+                  As a CS & AI student, I like approaching UI problems with a mix of logic and creativity. I mainly work with React, Next.js, and modern CSS tools to build fast and responsive web apps.
                 </p>
                 <p>
-                  I'm driven by curiosity and a constant desire to improve — always exploring new techniques in state management, animation systems, and design systems.
+                  I’m always trying to improve my skills — whether it’s learning better ways to manage state, experimenting with animations, or understanding design systems more deeply.
                 </p>
               </div>
             </div>
@@ -117,5 +116,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  );
+  </>;
 }

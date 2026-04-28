@@ -47,7 +47,7 @@ export default function Navbar() {
     { name: "Contact", href: "#contact", id: "contact" },
   ];
 
-  return (
+  return <>
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -135,5 +135,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </motion.nav>
-  );
+  </>;
 }
