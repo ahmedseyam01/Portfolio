@@ -1,0 +1,56 @@
+[
+  {
+    "id": "frontend",
+    "label": "Front-End",
+    "emoji": "🎨",
+    "skills": [
+      "React.js",
+      "Next.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Framer Motion",
+      "REST APIs",
+      "Redux",
+      "React Router",
+      "React Hook Form",
+      "Zod",
+      "React Query",
+      "NextAuth",
+      "Axios"
+    ]
+  },
+  {
+    "id": "languages",
+    "label": "Languages",
+    "emoji": "💻",
+    "skills": [
+      "JavaScript",
+      "C++",
+      "C#",
+      "Python",
+      "TypeScript",
+      "ES6+"
+    ]
+  },
+  {
+    "id": "tools",
+    "label": "Tools",
+    "emoji": "🛠️",
+    "skills": [
+      "Git",
+      "GitHub",
+      "Figma",
+      "VS Code",
+      "npm",
+      "Vite",
+      "Postman",
+      "Jira",
+      "Trello",
+      "Slack",
+      "Google Workspace"
+    ]
+  }
+]

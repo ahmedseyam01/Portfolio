@@ -1,0 +1,97 @@
+[
+  {
+    "title": "E-Commerce App",
+    "desc": "Full-featured e-commerce platform with dynamic routing, cart management, and checkout flow built on Next.js App Router.",
+    "tech": [
+      "Next.js",
+      "Tailwind CSS",
+      "React Context",
+      "REST APIs"
+    ],
+    "accent": "#C800DF",
+    "github": "#",
+    "live": "#"
+  },
+  {
+    "title": "SocialX",
+    "desc": "Social networking web application with real-time post feeds, user interactions, and responsive modern interface.",
+    "tech": [
+      "React.js",
+      "HeroUI",
+      "Tailwind CSS",
+      "React Hook Form",
+      "Vite"
+    ],
+    "accent": "#E60076",
+    "github": "https://github.com/ahmedseyam01/Socialix.git",
+    "live": "https://socialix-zeta.vercel.app"
+  },
+  {
+    "title": "Limpy-Fit",
+    "desc": "Comprehensive fitness tracking application featuring workout routine management, progress statistics, and Firebase integration.",
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Firebase",
+      "Framer Motion",
+      "Tailwind CSS"
+    ],
+    "accent": "#00b074",
+    "github": "https://github.com/ahmedseyam01/Limpy-Fit.git",
+    "live": "https://limpy-fit.vercel.app"
+  },
+  {
+    "title": "PS5 Hub",
+    "desc": "Gaming cafe & lounge platform featuring game tournament schedules, hourly rate calculators, menu showcase, and branch info.",
+    "tech": [
+      "JavaScript",
+      "Bootstrap 5",
+      "HTML5",
+      "CSS3",
+      "Bootstrap Icons"
+    ],
+    "accent": "#0070df",
+    "github": "https://github.com/ahmedseyam01/PS5-Hub.git",
+    "live": "https://ahmedseyam01.github.io/PS5-Hub/"
+  },
+  {
+    "title": "Music Player",
+    "desc": "Sleek web audio player with glassmorphism UI, playlist management, favorite tracks, and HTML5 Web Audio controls.",
+    "tech": [
+      "JavaScript (ES6+)",
+      "HTML5 Audio",
+      "CSS3 Glassmorphism",
+      "FontAwesome"
+    ],
+    "accent": "#7c00df",
+    "github": "https://github.com/ahmedseyam01/Nebula.git",
+    "live": "https://ahmedseyam01.github.io/Nebula/"
+  },
+  {
+    "title": "Weather App",
+    "desc": "Real-time weather forecast dashboard with interactive Leaflet location maps, multi-day forecasts, and dynamic UI alerts.",
+    "tech": [
+      "JavaScript (Async)",
+      "Weather API",
+      "Leaflet Maps",
+      "Bootstrap 5",
+      "SweetAlert2"
+    ],
+    "accent": "#df7000",
+    "github": "https://github.com/ahmedseyam01/Weather.git",
+    "live": "https://ahmedseyam01.github.io/Weather/"
+  },
+  {
+    "title": "To-Do List",
+    "desc": "Feature-rich task manager (FlowList) with status filtering, celebration animations, dark mode, and LocalStorage persistence.",
+    "tech": [
+      "JavaScript (DOM)",
+      "LocalStorage API",
+      "CSS3 Animations",
+      "FontAwesome"
+    ],
+    "accent": "#10b981",
+    "github": "https://github.com/ahmedseyam01/ToDoList.git",
+    "live": "https://ahmedseyam01.github.io/ToDoList/"
+  }
+]
