@@ -1,97 +1,116 @@
 [
   {
-    "title": "E-Commerce App",
-    "desc": "Full-featured e-commerce platform with dynamic routing, cart management, and checkout flow built on Next.js App Router.",
+    "title": "E-Commerce (Cartivo)",
+    "desc": "Mobile-first bilingual (Arabic / English, full RTL) storefront with search, filters and sorting kept in the URL, cart, optimistic wishlist, and checkout by Stripe card or cash on delivery. Secure NextAuth sessions, Server Actions for every mutation, ISR-cached pages, and SEO with sitemap and product structured data.",
     "tech": [
-      "Next.js",
-      "Tailwind CSS",
-      "React Context",
-      "REST APIs"
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "NextAuth",
+      "Server Actions",
+      "shadcn/ui",
+      "React Hook Form",
+      "Zod",
+      "Stripe"
     ],
     "accent": "#C800DF",
-    "github": "#",
-    "live": "#"
+    "github": "https://github.com/ahmedseyam01/Cartivo",
+    "live": "https://cartivo-coral.vercel.app"
   },
   {
-    "title": "SocialX",
-    "desc": "Social networking web application with real-time post feeds, user interactions, and responsive modern interface.",
+    "title": "Socialix",
+    "desc": "Social network app with a cached post feed, post composer with images and emoji, nested comments and replies, likes, saved posts, notifications, user suggestions, and profile settings. Protected routes, light / dark theme, and unit-tested API helpers.",
     "tech": [
-      "React.js",
+      "React 19",
+      "Vite",
       "HeroUI",
-      "Tailwind CSS",
+      "Tailwind CSS v4",
+      "React Router",
+      "Axios",
       "React Hook Form",
-      "Vite"
+      "Zod",
+      "Vitest"
     ],
     "accent": "#E60076",
-    "github": "https://github.com/ahmedseyam01/Socialix.git",
+    "github": "https://github.com/ahmedseyam01/Socialix",
     "live": "https://socialix-zeta.vercel.app"
   },
   {
-    "title": "Limpy-Fit",
-    "desc": "Comprehensive fitness tracking application featuring workout routine management, progress statistics, and Firebase integration.",
+    "title": "Limby Fit",
+    "desc": "Nutrition coaching platform for coaches and trainees: manage trainees, generate diet plans from a food database, track progress with charts, and export plans as PDF. Separate coach and trainee portals with Firebase cloud sync, Arabic UI, and installable PWA manifest.",
     "tech": [
-      "Next.js",
+      "React 18",
       "TypeScript",
+      "Vite",
       "Firebase",
+      "Tailwind CSS",
+      "Recharts",
       "Framer Motion",
-      "Tailwind CSS"
+      "html2pdf.js"
     ],
     "accent": "#00b074",
-    "github": "https://github.com/ahmedseyam01/Limpy-Fit.git",
+    "github": "https://github.com/ahmedseyam01/Limpy-Fit",
     "live": "https://limpy-fit.vercel.app"
   },
   {
     "title": "PS5 Hub",
-    "desc": "Gaming cafe & lounge platform featuring game tournament schedules, hourly rate calculators, menu showcase, and branch info.",
+    "desc": "Gaming lounge website with game detail modals, a menu cart, table reservation form, animated stat counters, 3D tilt cards, a canvas particle background, and a light / dark theme toggle.",
     "tech": [
-      "JavaScript",
-      "Bootstrap 5",
       "HTML5",
       "CSS3",
-      "Bootstrap Icons"
+      "JavaScript (ES6+)",
+      "Bootstrap 5",
+      "Bootstrap Icons",
+      "Canvas API"
     ],
     "accent": "#0070df",
-    "github": "https://github.com/ahmedseyam01/PS5-Hub.git",
+    "github": "https://github.com/ahmedseyam01/PS5-Hub",
     "live": "https://ahmedseyam01.github.io/PS5-Hub/"
   },
   {
-    "title": "Music Player",
-    "desc": "Sleek web audio player with glassmorphism UI, playlist management, favorite tracks, and HTML5 Web Audio controls.",
+    "title": "Nebula Music Player",
+    "desc": "Glassmorphism music player with iTunes track search, a persistent library that keeps your own MP3 files in IndexedDB, liked tracks, an animated audio visualizer, and Google sign-in through Firebase.",
     "tech": [
       "JavaScript (ES6+)",
       "HTML5 Audio",
-      "CSS3 Glassmorphism",
-      "FontAwesome"
+      "CSS3",
+      "IndexedDB",
+      "iTunes Search API",
+      "Firebase Auth",
+      "Font Awesome"
     ],
     "accent": "#7c00df",
-    "github": "https://github.com/ahmedseyam01/Nebula.git",
+    "github": "https://github.com/ahmedseyam01/Nebula",
     "live": "https://ahmedseyam01.github.io/Nebula/"
   },
   {
     "title": "Weather App",
-    "desc": "Real-time weather forecast dashboard with interactive Leaflet location maps, multi-day forecasts, and dynamic UI alerts.",
+    "desc": "Weather dashboard that detects your location, shows current conditions and a 3-day forecast with a temperature chart, and pins the city on an interactive map.",
     "tech": [
-      "JavaScript (Async)",
-      "Weather API",
-      "Leaflet Maps",
+      "JavaScript (Async/Await)",
+      "WeatherAPI",
+      "Geolocation API",
+      "Leaflet",
+      "Chart.js",
       "Bootstrap 5",
       "SweetAlert2"
     ],
     "accent": "#df7000",
-    "github": "https://github.com/ahmedseyam01/Weather.git",
+    "github": "https://github.com/ahmedseyam01/Weather",
     "live": "https://ahmedseyam01.github.io/Weather/"
   },
   {
-    "title": "To-Do List",
-    "desc": "Feature-rich task manager (FlowList) with status filtering, celebration animations, dark mode, and LocalStorage persistence.",
+    "title": "FlowList To-Do",
+    "desc": "Task manager with add, edit, and delete, status filters, confetti when you finish tasks, a dark mode, and tasks saved in LocalStorage.",
     "tech": [
       "JavaScript (DOM)",
-      "LocalStorage API",
+      "LocalStorage",
       "CSS3 Animations",
-      "FontAwesome"
+      "SweetAlert2",
+      "Font Awesome"
     ],
     "accent": "#10b981",
-    "github": "https://github.com/ahmedseyam01/ToDoList.git",
+    "github": "https://github.com/ahmedseyam01/ToDoList",
     "live": "https://ahmedseyam01.github.io/ToDoList/"
   }
 ]
