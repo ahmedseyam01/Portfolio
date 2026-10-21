@@ -15,11 +15,11 @@ export default function Skills() {
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
           setCategories(data);
-          if (!active) setActive(data[0].id);
+          setActive((prev) => prev || data[0].id);
         }
       })
       .catch(err => console.error("Failed to load skills from API", err));
-  }, [active]);
+  }, []);
 
   const current = categories.find((c) => c.id === active) || categories[0];
 
@@ -115,7 +115,7 @@ export default function Skills() {
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-8 relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8 flex flex-col justify-center min-h-0 transform-gpu hover:border-white/20 hover:shadow-[0_20px_50px_rgba(200,0,223,0.12)] transition-all duration-300"
+              className="lg:col-span-8 relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 p-6 md:p-8 flex flex-col justify-center min-h-0 hover:border-white/20 hover:shadow-[0_20px_50px_rgba(200,0,223,0.12)] transition-all duration-300"
             >
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"

@@ -45,7 +45,7 @@ export default function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true, amount: 0.15 }}
           className="mb-16"
         >
           <div className="flex items-center gap-3 mb-4">
@@ -59,7 +59,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 flex flex-col gap-6"
           >
@@ -121,7 +121,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >

@@ -10,7 +10,7 @@ export default function GlassCard({
   interactive = true,
   initial = { opacity: 0, y: 15 },
   whileInView = { opacity: 1, y: 0 },
-  viewport = { once: false },
+  viewport = { once: true, amount: 0.15 },
   transition = { duration: 0.55 }
 }) {
   const cardRef = useRef(null);
@@ -43,7 +43,7 @@ export default function GlassCard({
       whileInView={whileInView}
       viewport={viewport}
       transition={{ ...transition, delay }}
-      className={`relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden group transition-all duration-300 hover:border-white/20 ${className}`}
+      className={`relative rounded-3xl border border-white/10 bg-white/[0.03] overflow-hidden group transition-all duration-300 hover:border-white/20 ${className}`}
     >
       {interactive && (
         <motion.div

@@ -54,7 +54,7 @@ function ProjectCard({ project, index }) {
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="group relative flex flex-col h-full p-8 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md overflow-hidden transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_rgba(200,0,223,0.12)] transform-gpu"
+      className="group relative flex flex-col h-full p-8 rounded-3xl border border-white/10 bg-white/[0.03] overflow-hidden transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-[0_20px_50px_rgba(200,0,223,0.12)]"
     >
       {/* Dynamic Hover Glow */}
       <motion.div

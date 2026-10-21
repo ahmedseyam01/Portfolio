@@ -114,7 +114,7 @@ export default function Hero() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 }}
-                  className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/[0.03] border border-white/10 text-white/80 text-[10px] font-bold uppercase tracking-[0.2em] mb-10 backdrop-blur-md"
+                  className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/[0.03] border border-white/10 text-white/80 text-[10px] font-bold uppercase tracking-[0.2em] mb-10"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#C800DF] shadow-[0_0_10px_#C800DF] animate-pulse" />
                   Available for opportunities
@@ -162,7 +162,7 @@ export default function Hero() {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ y: -5, color: "#fff", backgroundColor: "rgba(200, 0, 223, 0.1)", borderColor: "rgba(200, 0, 223, 0.4)" }}
-                      className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white/[0.03] border border-white/10 text-[#9ca3af] backdrop-blur-md transition-all duration-300"
+                      className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white/[0.03] border border-white/10 text-[#9ca3af] transition-all duration-300"
                     >
                       {s.icon}
                     </motion.a>
@@ -176,7 +176,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.9 }}
             className="relative lg:col-span-5 rounded-3xl overflow-hidden min-h-[480px] group border border-white/10 shadow-[20px_0_50px_rgba(200,0,223,0.1)]"
           >
@@ -185,13 +185,14 @@ export default function Hero() {
               alt={siteConfig.name}
               fill
               priority
+              sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover object-top group-hover:scale-105 transition-transform duration-1000"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80" />
 
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[85%]">
               <GlassCard
-                className="p-6 text-center"
+                className="p-6 text-center backdrop-blur-xl"
                 interactive={false}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

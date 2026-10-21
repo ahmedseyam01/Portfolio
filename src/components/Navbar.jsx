@@ -11,7 +11,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     // Scroll Spy Logic
     const sections = ["hero", "about", "skills", "projects", "contact"];
@@ -53,7 +54,7 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-          ? "py-4 bg-[#0a0a0a]/80 backdrop-blur-2xl border-b border-white/5"
+          ? "py-4 bg-[#0a0a0a]/85 backdrop-blur-md border-b border-white/5"
           : "py-6 bg-transparent"
         }`}
     >
@@ -102,6 +103,8 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           className="md:hidden text-white p-2 rounded-lg hover:bg-white/5"
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -115,7 +118,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden absolute top-full left-0 right-0 bg-[#0a0a0a]/95 backdrop-blur-2xl border-t border-white/5 py-8 flex flex-col items-center gap-6"
+            className="md:hidden absolute top-full left-0 right-0 bg-[#0a0a0a] border-t border-white/5 py-8 flex flex-col items-center gap-6"
           >
             {navLinks.map((link) => (
               <a

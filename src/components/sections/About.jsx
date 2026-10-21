@@ -34,7 +34,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true, amount: 0.15 }}
           className="mb-16"
         >
           <div className="flex items-center gap-3 mb-4">
