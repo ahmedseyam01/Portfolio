@@ -9,8 +9,8 @@ export default function LoadingScreen({ onComplete }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(() => onComplete?.(), 300);
-    }, 1200);
+      onComplete?.();
+    }, 700);
     return () => clearTimeout(timer);
   }, [onComplete]);
 
@@ -63,7 +63,7 @@ export default function LoadingScreen({ onComplete }) {
               <motion.div
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 1.0, ease: "easeInOut" }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
                 className="h-full bg-gradient-to-r from-[#C800DF] to-[#E60076]"
               />
             </div>

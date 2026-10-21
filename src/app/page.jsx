@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { MotionConfig } from "framer-motion";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 import LoadingScreen from "@/components/LoadingScreen";
@@ -11,29 +11,25 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
 
+// The page renders right away (and is server-rendered); the loading screen
+// is only a short overlay on top instead of blocking the whole page.
 export default function Home() {
-  const [loadingComplete, setLoadingComplete] = useState(false);
-
   return <>
-    <>
-      <LoadingScreen onComplete={() => setLoadingComplete(true)} />
+    <MotionConfig reducedMotion="user">
+      <LoadingScreen />
 
-      {loadingComplete && (
-        <>
-          <AnimatedBackground />
-          <Navbar />
+      <AnimatedBackground />
+      <Navbar />
 
-          <main id="main-content" className="flex min-h-screen flex-col w-full">
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
-          </main>
+      <main id="main-content" className="flex min-h-screen flex-col w-full">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
 
-          <Footer />
-        </>
-      )}
-    </>
+      <Footer />
+    </MotionConfig>
   </>;
 }
